@@ -22,8 +22,8 @@ export const Collection: React.FC<CollectionProps> = () => {
         {/* Section Header */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-12">
           <div className="lg:col-span-7 space-y-3">
-            <div className="inline-flex items-center gap-2.5 text-[#0787c8] text-xs font-black tracking-widest uppercase">
-              <span className="w-8 h-[2px] bg-[#0787c8] inline-block" />
+            <div className="inline-flex items-center gap-2.5 text-[#b8934a] text-xs font-black tracking-widest uppercase">
+              <span className="w-8 h-[2px] bg-[#b8934a] inline-block" />
               <span>Coleção corda náutica</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#132a34] font-medium leading-tight">
@@ -48,8 +48,8 @@ export const Collection: React.FC<CollectionProps> = () => {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-5 py-2.5 rounded-full text-xs font-extrabold uppercase tracking-wider transition-all cursor-pointer flex items-center gap-2 ${
                   selectedCategory === cat
-                    ? 'bg-[#07516f] text-white shadow-md scale-105'
-                    : 'bg-[#f7f3ec] text-[#607078] hover:bg-[#dce5e7] hover:text-[#132a34]'
+                    ? 'bg-[#b8934a] text-white shadow-md scale-105'
+                    : 'bg-[#f7f3ec] text-[#607078] hover:bg-[#e8dfd0] hover:text-[#132a34]'
                 }`}
               >
                 <span>{cat}</span>
@@ -81,7 +81,7 @@ export const Collection: React.FC<CollectionProps> = () => {
                   />
                   
                   {/* Category Badge */}
-                  <span className="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-[10px] font-bold uppercase tracking-wider text-[#07516f]">
+                  <span className="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-[10px] font-bold uppercase tracking-wider text-[#b8934a]">
                     {product.category}
                   </span>
                 </div>

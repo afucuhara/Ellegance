@@ -10,7 +10,7 @@ export const ContactSection: React.FC<ContactSectionProps> = () => {
   const whatsappUrl = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent('Olá, vim pelo site e gostaria de solicitar um orçamento.')}`;
 
   return (
-    <section id="contato" className="relative py-20 lg:py-28 bg-gradient-to-r from-[#0b536f] to-[#0787c8] text-white overflow-hidden">
+    <section id="contato" className="relative py-20 lg:py-28 bg-gradient-to-r from-[#161c20] to-[#252f36] text-white overflow-hidden">
       {/* Background ambient circle decoration */}
       <div className="absolute -left-72 -top-72 w-[630px] h-[630px] rounded-full border border-white/15 pointer-events-none" />
 
@@ -19,8 +19,8 @@ export const ContactSection: React.FC<ContactSectionProps> = () => {
           
           {/* Left Copy Column */}
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2.5 text-[#91ddff] text-xs font-black tracking-widest uppercase">
-              <span className="w-8 h-[2px] bg-[#91ddff] inline-block" />
+            <div className="inline-flex items-center gap-2.5 text-[#c5a25d] text-xs font-black tracking-widest uppercase">
+              <span className="w-8 h-[2px] bg-[#c5a25d] inline-block" />
               <span>Vamos criar juntos?</span>
             </div>
 
@@ -37,9 +37,9 @@ export const ContactSection: React.FC<ContactSectionProps> = () => {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="h-16 px-8 bg-white hover:bg-[#f7f3ec] text-[#07516f] text-base font-extrabold rounded-xl shadow-2xl transition-all transform hover:-translate-y-0.5 active:translate-y-0 inline-flex items-center justify-center gap-3"
+                className="h-16 px-8 bg-[#b8934a] hover:bg-[#9a7836] text-white text-base font-extrabold rounded-xl shadow-2xl transition-all transform hover:-translate-y-0.5 active:translate-y-0 inline-flex items-center justify-center gap-3"
               >
-                <MessageCircle className="w-5 h-5 text-[#0787c8]" />
+                <MessageCircle className="w-5 h-5 text-white" />
                 <span>Chamar no WhatsApp</span>
                 <ExternalLink className="w-4 h-4" />
               </a>
@@ -51,16 +51,16 @@ export const ContactSection: React.FC<ContactSectionProps> = () => {
             
             {/* Phone Item */}
             <div className="flex items-start gap-4 pb-5 border-b border-white/15">
-              <div className="p-3 bg-white/10 text-[#91ddff] rounded-xl shrink-0">
+              <div className="p-3 bg-white/10 text-[#c5a25d] rounded-xl shrink-0">
                 <Phone className="w-5 h-5" />
               </div>
               <div>
-                <span className="block text-[10px] font-bold uppercase tracking-wider text-[#91ddff]">
+                <span className="block text-[10px] font-bold uppercase tracking-wider text-[#c5a25d]">
                   WhatsApp
                 </span>
                 <a
                   href={`tel:${DISPLAY_PHONE.replace(/\D/g, '')}`}
-                  className="text-lg font-bold text-white hover:text-[#91ddff] transition-colors"
+                  className="text-lg font-bold text-white hover:text-[#c5a25d] transition-colors"
                 >
                   {DISPLAY_PHONE}
                 </a>
@@ -69,11 +69,11 @@ export const ContactSection: React.FC<ContactSectionProps> = () => {
 
             {/* Team Item */}
             <div className="flex items-start gap-4 pb-5 border-b border-white/15">
-              <div className="p-3 bg-white/10 text-[#91ddff] rounded-xl shrink-0">
+              <div className="p-3 bg-white/10 text-[#c5a25d] rounded-xl shrink-0">
                 <UserCheck className="w-5 h-5" />
               </div>
               <div>
-                <span className="block text-[10px] font-bold uppercase tracking-wider text-[#91ddff]">
+                <span className="block text-[10px] font-bold uppercase tracking-wider text-[#c5a25d]">
                   Atendimento Especializado
                 </span>
                 <p className="text-base font-bold text-white">
@@ -84,18 +84,18 @@ export const ContactSection: React.FC<ContactSectionProps> = () => {
 
             {/* Showroom Location Item */}
             <div className="flex items-start gap-4">
-              <div className="p-3 bg-white/10 text-[#91ddff] rounded-xl shrink-0">
+              <div className="p-3 bg-white/10 text-[#c5a25d] rounded-xl shrink-0">
                 <MapPin className="w-5 h-5" />
               </div>
               <div>
-                <span className="block text-[10px] font-bold uppercase tracking-wider text-[#91ddff]">
+                <span className="block text-[10px] font-bold uppercase tracking-wider text-[#c5a25d]">
                   Showroom Curitiba
                 </span>
                 <a
                   href={MAPS_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm font-medium text-white hover:text-[#91ddff] transition-colors flex items-center gap-1 mt-0.5"
+                  className="text-sm font-medium text-white hover:text-[#c5a25d] transition-colors flex items-center gap-1 mt-0.5"
                 >
                   <span>{SHOWROOM_ADDRESS}</span>
                   <ExternalLink className="w-3.5 h-3.5 shrink-0" />

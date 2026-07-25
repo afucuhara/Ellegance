@@ -42,10 +42,10 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fadeIn">
       <div className="relative w-full max-w-xl bg-white rounded-2xl shadow-2xl overflow-hidden border border-[#dce5e7]">
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-5 bg-[#07516f] text-white">
+        <div className="flex items-center justify-between px-6 py-5 bg-[#1a2228] text-white">
           <div className="flex items-center gap-3">
             <div className="p-2 bg-white/10 rounded-lg">
-              <MessageSquare className="w-5 h-5 text-[#8edafb]" />
+              <MessageSquare className="w-5 h-5 text-[#c5a25d]" />
             </div>
             <div>
               <h3 className="text-lg font-serif font-medium leading-tight">Solicitar Orçamento</h3>
@@ -72,7 +72,7 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
               placeholder="Como prefere ser chamado(a)?"
               value={userName}
               onChange={(e) => setUserName(e.target.value)}
-              className="w-full px-4 py-2.5 rounded-lg border border-[#dce5e7] focus:outline-none focus:ring-2 focus:ring-[#0787c8] text-sm"
+              className="w-full px-4 py-2.5 rounded-lg border border-[#e2d9c7] focus:outline-none focus:ring-2 focus:ring-[#b8934a] text-sm"
             />
           </div>
 
@@ -88,8 +88,8 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
                   onClick={() => setSelectedProduct(prod.title)}
                   className={`px-3 py-2 text-xs font-medium rounded-lg border text-left transition-all ${
                     selectedProduct === prod.title
-                      ? 'border-[#0787c8] bg-[#0787c8]/10 text-[#07516f] font-bold'
-                      : 'border-[#dce5e7] hover:border-[#0787c8]/50 text-[#132a34]'
+                      ? 'border-[#b8934a] bg-[#b8934a]/10 text-[#b8934a] font-bold'
+                      : 'border-[#e2d9c7] hover:border-[#b8934a]/50 text-[#132a34]'
                   }`}
                 >
                   {prod.title}
@@ -110,8 +110,8 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
                   onClick={() => setSelectedColor(color.name)}
                   className={`flex items-center gap-2 px-3 py-1.5 text-xs rounded-full border transition-all ${
                     selectedColor === color.name
-                      ? 'border-[#0787c8] bg-[#07516f] text-white font-medium shadow-sm'
-                      : 'border-[#dce5e7] bg-[#f7f3ec] text-[#132a34] hover:border-[#0787c8]'
+                      ? 'border-[#b8934a] bg-[#b8934a] text-white font-medium shadow-sm'
+                      : 'border-[#e2d9c7] bg-[#f7f3ec] text-[#132a34] hover:border-[#b8934a]'
                   }`}
                 >
                   <span
@@ -127,8 +127,8 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
                 onClick={() => setSelectedColor('Outra cor sob consulta')}
                 className={`px-3 py-1.5 text-xs rounded-full border transition-all ${
                   selectedColor === 'Outra cor sob consulta'
-                    ? 'border-[#0787c8] bg-[#07516f] text-white font-medium'
-                    : 'border-[#dce5e7] bg-[#f7f3ec] text-[#132a34]'
+                    ? 'border-[#b8934a] bg-[#b8934a] text-white font-medium'
+                    : 'border-[#e2d9c7] bg-[#f7f3ec] text-[#132a34]'
                 }`}
               >
                 + Outra cor
@@ -145,24 +145,24 @@ export const QuoteModal: React.FC<QuoteModalProps> = ({
               placeholder="Ex: Varanda gourmet de 3m x 2m; preciso de mesa redonda para 6 lugares..."
               value={customDimensions}
               onChange={(e) => setCustomDimensions(e.target.value)}
-              className="w-full px-4 py-2.5 rounded-lg border border-[#dce5e7] focus:outline-none focus:ring-2 focus:ring-[#0787c8] text-sm resize-none"
+              className="w-full px-4 py-2.5 rounded-lg border border-[#e2d9c7] focus:outline-none focus:ring-2 focus:ring-[#b8934a] text-sm resize-none"
             />
           </div>
 
           {/* Quick info box */}
-          <div className="p-3.5 bg-[#f7f3ec] rounded-xl border border-[#dce5e7] flex items-center justify-between text-xs text-[#607078]">
+          <div className="p-3.5 bg-[#f7f3ec] rounded-xl border border-[#e2d9c7] flex items-center justify-between text-xs text-[#607078]">
             <div className="flex items-center gap-2">
-              <PhoneCall className="w-4 h-4 text-[#0787c8]" />
+              <PhoneCall className="w-4 h-4 text-[#b8934a]" />
               <span>WhatsApp Showroom: <strong>{DISPLAY_PHONE}</strong></span>
             </div>
-            <span className="hidden sm:inline-block font-semibold text-[#07516f]">Resposta rápida</span>
+            <span className="hidden sm:inline-block font-semibold text-[#b8934a]">Resposta rápida</span>
           </div>
 
           {/* Submit */}
           <div className="pt-2">
             <button
               type="submit"
-              className="w-full py-3.5 px-6 bg-[#0787c8] hover:bg-[#07516f] text-white font-bold rounded-xl shadow-lg shadow-[#0787c8]/20 hover:shadow-xl transition-all flex items-center justify-center gap-2 text-sm"
+              className="w-full py-3.5 px-6 bg-[#b8934a] hover:bg-[#9a7836] text-white font-bold rounded-xl shadow-lg shadow-[#b8934a]/20 hover:shadow-xl transition-all flex items-center justify-center gap-2 text-sm"
             >
               <span>Enviar via WhatsApp</span>
               <Send className="w-4 h-4" />

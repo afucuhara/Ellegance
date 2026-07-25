@@ -29,8 +29,8 @@ export const ProcessSection: React.FC = () => {
         
         {/* Header */}
         <div className="max-w-3xl space-y-3 mb-16">
-          <div className="inline-flex items-center gap-2.5 text-[#0787c8] text-xs font-black tracking-widest uppercase">
-            <span className="w-8 h-[2px] bg-[#0787c8] inline-block" />
+          <div className="inline-flex items-center gap-2.5 text-[#b8934a] text-xs font-black tracking-widest uppercase">
+            <span className="w-8 h-[2px] bg-[#b8934a] inline-block" />
             <span>Simples e personalizado</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#132a34] font-medium leading-tight">
@@ -42,18 +42,18 @@ export const ProcessSection: React.FC = () => {
         </div>
 
         {/* Steps Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-b border-[#ced9dc] py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 border-t border-b border-[#e2d9c7] py-12">
           {steps.map((step) => {
             const Icon = step.icon;
             return (
               <article key={step.number} className="relative space-y-4 md:pr-6">
-                <div className="w-10 h-1 bg-[#0787c8] mb-6" />
-                <div className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-[#0787c8]">
+                <div className="w-10 h-1 bg-[#b8934a] mb-6" />
+                <div className="inline-flex items-center gap-2 text-xs font-black uppercase tracking-widest text-[#b8934a]">
                   <span>Passo {step.number}</span>
                 </div>
 
                 <div className="flex items-center gap-3">
-                  <div className="p-2.5 bg-[#0787c8]/10 text-[#0787c8] rounded-xl">
+                  <div className="p-2.5 bg-[#b8934a]/10 text-[#b8934a] rounded-xl">
                     <Icon className="w-6 h-6" />
                   </div>
                   <h3 className="text-xl sm:text-2xl font-serif text-[#132a34] font-medium">

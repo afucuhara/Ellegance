@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 160" width="520" height="160">
+  <!-- Circle Monogram E -->
+  <circle cx="80" cy="80" r="68" fill="none" stroke="#C5A25D" stroke-width="4.5"/>
+  <!-- Elegant Calligraphic Cursive E inside circle -->
+  <path d="M102 46 C80 43 56 60 56 76 C56 88 68 94 82 94 C95 94 102 88 94 80 C85 72 72 80 62 80 C53 80 50 74 56 67 C64 58 86 52 101 58 C114 62 100 76 86 82 C68 90 44 103 44 118 C44 128 58 131 76 128 C97 124 118 110 128 100" fill="none" stroke="#C5A25D" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Right Text Block -->
+  <!-- "Ellegance" in elegant serif font -->
+  <text x="170" y="80" font-family="'Playfair Display', 'Cormorant Garamond', 'Georgia', serif" font-size="68" font-weight="500" fill="#1A1A1A" letter-spacing="1">Ellegance</text>
+  
+  <!-- Divider Line with MÓVEIS -->
+  <line x1="170" y1="104" x2="255" y2="104" stroke="#C5A25D" stroke-width="1.8"/>
+  <text x="330" y="109" font-family="'Montserrat', 'Helvetica Neue', sans-serif" font-size="16" font-weight="600" fill="#C5A25D" letter-spacing="7" text-anchor="middle">MÓVEIS</text>
+  <line x1="405" y1="104" x2="490" y2="104" stroke="#C5A25D" stroke-width="1.8"/>
+  
+  <!-- Subtitle: Corda Náutica sob medida -->
+  <text x="330" y="134" font-family="'Montserrat', 'Helvetica Neue', sans-serif" font-size="18" font-weight="400" fill="#333333" letter-spacing="1.5" text-anchor="middle">Corda Náutica sob medida</text>
+</svg>

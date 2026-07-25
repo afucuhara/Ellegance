@@ -10,7 +10,7 @@ export const CraftSection: React.FC<CraftSectionProps> = () => {
   const whatsappUrl = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent('Olá, gostaria de tirar dúvidas sobre os móveis.')}`;
 
   return (
-    <section id="diferenciais" className="relative py-20 lg:py-28 bg-[#0b4056] text-white overflow-hidden">
+    <section id="diferenciais" className="relative py-20 lg:py-28 bg-[#1a2228] text-white overflow-hidden">
       {/* Decorative ambient background circle */}
       <div className="absolute -right-64 -bottom-64 w-[600px] h-[600px] rounded-full border border-white/10 pointer-events-none" />
 
@@ -25,15 +25,15 @@ export const CraftSection: React.FC<CraftSectionProps> = () => {
                 alt="Detalhe do trançado artesanal em corda náutica preta"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0b4056]/80 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1a2228]/80 via-transparent to-transparent" />
             </div>
           </div>
 
           {/* Right Copy Column */}
           <div className="lg:col-span-7 space-y-8 pt-4 lg:pt-0">
             <div className="space-y-3">
-              <div className="inline-flex items-center gap-2.5 text-[#8edafb] text-xs font-black tracking-widest uppercase">
-                <span className="w-8 h-[2px] bg-[#8edafb] inline-block" />
+              <div className="inline-flex items-center gap-2.5 text-[#c5a25d] text-xs font-black tracking-widest uppercase">
+                <span className="w-8 h-[2px] bg-[#c5a25d] inline-block" />
                 <span>Feito para durar</span>
               </div>
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-white font-medium leading-tight">
@@ -48,7 +48,7 @@ export const CraftSection: React.FC<CraftSectionProps> = () => {
             {/* Features List */}
             <div className="space-y-6 pt-2 border-t border-white/20">
               <div className="flex items-start gap-4">
-                <div className="p-2.5 bg-white/10 text-[#8edafb] rounded-xl shrink-0 mt-1">
+                <div className="p-2.5 bg-white/10 text-[#c5a25d] rounded-xl shrink-0 mt-1">
                   <ShieldCheck className="w-5 h-5" />
                 </div>
                 <div>
@@ -60,7 +60,7 @@ export const CraftSection: React.FC<CraftSectionProps> = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="p-2.5 bg-white/10 text-[#8edafb] rounded-xl shrink-0 mt-1">
+                <div className="p-2.5 bg-white/10 text-[#c5a25d] rounded-xl shrink-0 mt-1">
                   <Heart className="w-5 h-5" />
                 </div>
                 <div>
@@ -72,7 +72,7 @@ export const CraftSection: React.FC<CraftSectionProps> = () => {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="p-2.5 bg-white/10 text-[#8edafb] rounded-xl shrink-0 mt-1">
+                <div className="p-2.5 bg-white/10 text-[#c5a25d] rounded-xl shrink-0 mt-1">
                   <Sparkles className="w-5 h-5" />
                 </div>
                 <div>
@@ -90,7 +90,7 @@ export const CraftSection: React.FC<CraftSectionProps> = () => {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-transparent hover:bg-white text-white hover:text-[#0b4056] border-2 border-white/40 hover:border-white text-sm font-extrabold rounded-xl transition-all shadow-lg"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-[#b8934a] hover:bg-[#9a7836] text-white border-2 border-[#b8934a] hover:border-[#9a7836] text-sm font-extrabold rounded-xl transition-all shadow-lg"
               >
                 <span>Quero tirar minhas dúvidas</span>
                 <ArrowUpRight className="w-4 h-4" />

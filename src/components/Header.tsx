@@ -31,10 +31,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-40 transition-all duration-300 h-[76px] lg:h-[88px] flex items-center ${
+      className={`fixed top-0 inset-x-0 z-40 transition-all duration-300 h-[76px] lg:h-[88px] flex items-center bg-white ${
         scrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-sm'
-          : 'bg-white/90 backdrop-blur-md'
+          ? 'shadow-md border-b border-[#e2d9c7]/40'
+          : 'border-b border-[#e2d9c7]/20'
       }`}
     >
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 flex items-center justify-between gap-4">
@@ -53,10 +53,10 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
             <a
               key={link.name}
               href={link.href}
-              className="relative text-[#344b55] hover:text-[#0787c8] font-bold text-sm xl:text-[15px] tracking-wide transition-colors group"
+              className="relative text-[#2c373e] hover:text-[#b8934a] font-bold text-sm xl:text-[15px] tracking-wide transition-colors group"
             >
               {link.name}
-              <span className="absolute bottom-[-8px] left-0 right-full h-[2px] bg-[#0787c8] transition-all duration-300 group-hover:right-0" />
+              <span className="absolute bottom-[-8px] left-0 right-full h-[2px] bg-[#b8934a] transition-all duration-300 group-hover:right-0" />
             </a>
           ))}
         </nav>
@@ -67,7 +67,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden sm:inline-flex items-center justify-center gap-2 h-11 lg:h-12 px-5 lg:px-6 bg-[#0787c8] hover:bg-[#07516f] text-white text-xs lg:text-sm font-extrabold rounded-lg shadow-lg shadow-[#0787c8]/20 hover:shadow-xl transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+            className="hidden sm:inline-flex items-center justify-center gap-2 h-11 lg:h-12 px-5 lg:px-6 bg-[#b8934a] hover:bg-[#9a7836] text-white text-xs lg:text-sm font-extrabold rounded-lg shadow-lg shadow-[#b8934a]/20 hover:shadow-xl transition-all transform hover:-translate-y-0.5 active:translate-y-0"
           >
             <span>Pedir orçamento</span>
             <ArrowUpRight className="w-4 h-4" />
@@ -76,7 +76,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
           {/* Mobile menu trigger */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-[#132a34] hover:text-[#0787c8] rounded-lg border border-[#dce5e7]"
+            className="lg:hidden p-2 text-[#132a34] hover:text-[#b8934a] rounded-lg border border-[#e2d9c7]"
             aria-label="Toggle menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -86,14 +86,14 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
 
       {/* Mobile Menu Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden fixed inset-x-0 top-[76px] bg-white border-b border-[#dce5e7] shadow-xl p-6 flex flex-col gap-4 animate-fadeIn">
+        <div className="lg:hidden fixed inset-x-0 top-[76px] bg-white border-b border-[#e2d9c7] shadow-xl p-6 flex flex-col gap-4 animate-fadeIn">
           <nav className="flex flex-col gap-3">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-base font-bold text-[#132a34] hover:text-[#0787c8] py-2 border-b border-[#f7f3ec] transition-colors"
+                className="text-base font-bold text-[#132a34] hover:text-[#b8934a] py-2 border-b border-[#f7f3ec] transition-colors"
               >
                 {link.name}
               </a>
@@ -105,7 +105,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full py-3.5 px-5 bg-[#0787c8] text-white font-bold rounded-lg flex items-center justify-center gap-2 shadow-md"
+              className="w-full py-3.5 px-5 bg-[#b8934a] text-white font-bold rounded-lg flex items-center justify-center gap-2 shadow-md"
             >
               <MessageCircle className="w-5 h-5" />
               <span>Solicitar Orçamento via WhatsApp</span>

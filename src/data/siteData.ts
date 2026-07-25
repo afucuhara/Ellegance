@@ -1,10 +1,12 @@
 import { Product, GalleryItem, RopeColor, FaqItem } from '../types';
+import logoImg from '../assets/images/regenerated_image_1785002193276.png';
 
 export const PHONE_NUMBER = "5541997682816";
 export const DISPLAY_PHONE = "(41) 99768-2816";
 export const SHOWROOM_ADDRESS = "Av. Marechal Mascarenhas de Morais, 992 - Santa Cândida · Curitiba — PR";
 export const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Av.+Marechal+Mascarenhas+de+Morais,+992,+Santa+C%C3%A2ndida,+Curitiba+-+PR";
-export const LOGO_URL = "https://ellegance-moveis.daring-fairy-0251.chatgpt.site/ellegance-logo.webp";
+export const LOGO_URL = logoImg;
+export const LOGO_WHITE_URL = logoImg;
 
 export const PRODUCTS: Product[] = [
   {

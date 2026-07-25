@@ -12,7 +12,7 @@ export const PromiseStrip: React.FC = () => {
   const marqueeItems = [...promises, ...promises, ...promises, ...promises];
 
   return (
-    <section className="bg-[#0787c8] text-white py-2.5 overflow-hidden shadow-inner border-y border-[#0787c8]/20 select-none">
+    <section className="bg-[#b8934a] text-white py-2.5 overflow-hidden shadow-inner border-y border-[#b8934a]/20 select-none">
       <div className="w-full overflow-hidden flex">
         <div className="animate-marquee flex items-center gap-8 sm:gap-12">
           {marqueeItems.map((promise, index) => (

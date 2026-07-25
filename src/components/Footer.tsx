@@ -38,7 +38,7 @@ export const Footer: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-xs sm:text-sm font-extrabold text-[#344b55] hover:text-[#0787c8] transition-colors"
+                className="text-xs sm:text-sm font-extrabold text-[#2c373e] hover:text-[#b8934a] transition-colors"
               >
                 {link.name}
               </a>
@@ -53,7 +53,7 @@ export const Footer: React.FC = () => {
             href="https://www.ellegancemoveis.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-[#0787c8] font-semibold transition-colors"
+            className="hover:text-[#b8934a] font-semibold transition-colors"
           >
             ellegancemoveis.com
           </a>

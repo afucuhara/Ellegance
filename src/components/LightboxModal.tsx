@@ -66,7 +66,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
 
         <div className="mt-4 text-center max-w-xl">
           {category && (
-            <span className="text-[10px] uppercase tracking-widest text-[#8edafb] font-bold">
+            <span className="text-[10px] uppercase tracking-widest text-[#c5a25d] font-bold">
               {category}
             </span>
           )}
@@ -78,7 +78,7 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
                 onClose();
                 onRequestQuote(title);
               }}
-              className="mt-3 inline-flex items-center gap-2 px-5 py-2.5 bg-[#0787c8] hover:bg-[#07516f] text-white text-xs font-bold rounded-full transition-all shadow-lg"
+              className="mt-3 inline-flex items-center gap-2 px-5 py-2.5 bg-[#b8934a] hover:bg-[#9a7836] text-white text-xs font-bold rounded-full transition-all shadow-lg"
             >
               <MessageSquare className="w-4 h-4" />
               <span>Orçamento para este modelo ↗</span>

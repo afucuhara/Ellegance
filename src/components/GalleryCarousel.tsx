@@ -26,8 +26,8 @@ export const GalleryCarousel: React.FC<GalleryCarouselProps> = ({ onOpenLightbox
         {/* Gallery Heading */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-10">
           <div className="lg:col-span-7 space-y-3">
-            <div className="inline-flex items-center gap-2.5 text-[#0787c8] text-xs font-black tracking-widest uppercase">
-              <span className="w-8 h-[2px] bg-[#0787c8] inline-block" />
+            <div className="inline-flex items-center gap-2.5 text-[#b8934a] text-xs font-black tracking-widest uppercase">
+              <span className="w-8 h-[2px] bg-[#b8934a] inline-block" />
               <span>Projetos Ellegance</span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-[#132a34] font-medium leading-tight">
@@ -49,14 +49,14 @@ export const GalleryCarousel: React.FC<GalleryCarouselProps> = ({ onOpenLightbox
           <div className="flex items-center gap-2">
             <button
               onClick={() => scroll('left')}
-              className="w-11 h-11 rounded-full border border-[#cfd9da] bg-white/90 hover:bg-[#07516f] hover:text-white text-[#07516f] flex items-center justify-center transition-all shadow-sm"
+              className="w-11 h-11 rounded-full border border-[#cfd9da] bg-white/90 hover:bg-[#b8934a] hover:text-white text-[#b8934a] flex items-center justify-center transition-all shadow-sm"
               aria-label="Anterior"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
             <button
               onClick={() => scroll('right')}
-              className="w-11 h-11 rounded-full border border-[#cfd9da] bg-white/90 hover:bg-[#07516f] hover:text-white text-[#07516f] flex items-center justify-center transition-all shadow-sm"
+              className="w-11 h-11 rounded-full border border-[#cfd9da] bg-white/90 hover:bg-[#b8934a] hover:text-white text-[#b8934a] flex items-center justify-center transition-all shadow-sm"
               aria-label="Próximo"
             >
               <ChevronRight className="w-5 h-5" />

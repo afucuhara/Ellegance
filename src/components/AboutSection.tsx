@@ -10,19 +10,19 @@ export const AboutSection: React.FC = () => {
           {/* Left Column: Number + History */}
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-12 gap-8 items-start">
             {/* Big 20 number */}
-            <div className="sm:col-span-4 flex flex-col text-[#0787c8]">
+            <div className="sm:col-span-4 flex flex-col text-[#b8934a]">
               <span className="text-7xl sm:text-8xl lg:text-9xl font-serif font-bold leading-none tracking-tight">
                 20
               </span>
-              <span className="text-xs font-black uppercase tracking-widest text-[#07516f] mt-2">
+              <span className="text-xs font-black uppercase tracking-widest text-[#b8934a] mt-2">
                 anos de Ellegance
               </span>
             </div>
 
             {/* Story text */}
             <div className="sm:col-span-8 space-y-4">
-              <div className="inline-flex items-center gap-2.5 text-[#0787c8] text-xs font-black tracking-widest uppercase">
-                <span className="w-8 h-[2px] bg-[#0787c8] inline-block" />
+              <div className="inline-flex items-center gap-2.5 text-[#b8934a] text-xs font-black tracking-widest uppercase">
+                <span className="w-8 h-[2px] bg-[#b8934a] inline-block" />
                 <span>Nossa história</span>
               </div>
 
@@ -40,7 +40,7 @@ export const AboutSection: React.FC = () => {
 
               {/* Founder Signatures */}
               <div className="pt-4 border-t border-[#dce5e7]">
-                <p className="font-serif italic text-xl text-[#07516f] font-medium">
+                <p className="font-serif italic text-xl text-[#b8934a] font-medium">
                   Rafael & Michelle
                 </p>
                 <span className="text-[10px] uppercase font-black tracking-widest text-[#607078]">
@@ -60,8 +60,8 @@ export const AboutSection: React.FC = () => {
               />
             </div>
 
-            <div className="absolute -bottom-6 -left-6 bg-[#07516f] text-white p-5 rounded-2xl shadow-xl hidden sm:flex items-center gap-4 max-w-xs">
-              <div className="p-3 bg-white/10 rounded-xl text-[#8edafb]">
+            <div className="absolute -bottom-6 -left-6 bg-[#1a2228] text-white p-5 rounded-2xl shadow-xl hidden sm:flex items-center gap-4 max-w-xs">
+              <div className="p-3 bg-white/10 rounded-xl text-[#c5a25d]">
                 <Award className="w-6 h-6" />
               </div>
               <p className="text-xs leading-relaxed">
