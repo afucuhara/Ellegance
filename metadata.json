@@ -1,0 +1,6 @@
+{
+  "name": "Ellegance Móveis",
+  "description": "Móveis artesanais em corda náutica para áreas internas e externas",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
