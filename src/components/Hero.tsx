@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, ArrowDown, Sparkles } from 'lucide-react';
+import { ArrowUpRight, ArrowDown } from 'lucide-react';
 
 interface HeroProps {
   onOpenQuoteModal: () => void;
@@ -49,30 +49,30 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal }) => {
             </div>
 
             {/* Proof Stats Grid */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-8 border-t border-[#dce5e7]">
+            <div className="grid grid-cols-3 gap-2 sm:gap-6 pt-6 sm:pt-8 border-t border-[#dce5e7]">
               <div>
-                <strong className="block text-2xl lg:text-3xl text-[#0787c8] font-bold font-serif">
+                <strong className="block text-base xs:text-lg sm:text-2xl lg:text-3xl text-[#0787c8] font-bold font-serif whitespace-nowrap">
                   20 anos
                 </strong>
-                <span className="text-xs uppercase tracking-wider text-[#607078] font-medium">
+                <span className="text-[9px] xs:text-[10px] sm:text-xs uppercase tracking-tight sm:tracking-wider text-[#607078] font-medium block mt-0.5 leading-tight">
                   criando boas histórias
                 </span>
               </div>
 
               <div>
-                <strong className="block text-2xl lg:text-3xl text-[#0787c8] font-bold font-serif">
+                <strong className="block text-base xs:text-lg sm:text-2xl lg:text-3xl text-[#0787c8] font-bold font-serif whitespace-nowrap">
                   100%
                 </strong>
-                <span className="text-xs uppercase tracking-wider text-[#607078] font-medium">
+                <span className="text-[9px] xs:text-[10px] sm:text-xs uppercase tracking-tight sm:tracking-wider text-[#607078] font-medium block mt-0.5 leading-tight">
                   produção artesanal
                 </span>
               </div>
 
-              <div className="col-span-2 sm:col-span-1">
-                <strong className="block text-2xl lg:text-3xl text-[#0787c8] font-bold font-serif">
+              <div>
+                <strong className="block text-base xs:text-lg sm:text-2xl lg:text-3xl text-[#0787c8] font-bold font-serif whitespace-nowrap">
                   Todo Brasil
                 </strong>
-                <span className="text-xs uppercase tracking-wider text-[#607078] font-medium">
+                <span className="text-[9px] xs:text-[10px] sm:text-xs uppercase tracking-tight sm:tracking-wider text-[#607078] font-medium block mt-0.5 leading-tight">
                   entrega sob consulta
                 </span>
               </div>
@@ -101,21 +101,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal }) => {
                 alt="Cadeira artesanal preta em corda náutica"
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
               />
-            </div>
-
-            {/* Material Chip Badge */}
-            <div className="absolute left-[20%] bottom-8 z-30 flex items-center gap-3 p-3 sm:p-4 bg-white/95 backdrop-blur-md rounded-2xl shadow-xl border border-[#dce5e7]">
-              <div className="w-11 h-11 rounded-xl bg-gradient-to-r from-[#cbb18b] to-[#dfccb0] shadow-inner flex items-center justify-center shrink-0">
-                <Sparkles className="w-5 h-5 text-white/80" />
-              </div>
-              <div>
-                <span className="block text-[10px] uppercase font-bold tracking-widest text-[#607078]">
-                  Toque & resistência
-                </span>
-                <strong className="text-xs sm:text-sm text-[#132a34] font-bold">
-                  Corda náutica premium
-                </strong>
-              </div>
             </div>
           </div>
 

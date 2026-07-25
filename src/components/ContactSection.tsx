@@ -1,12 +1,14 @@
 import React from 'react';
 import { MessageCircle, MapPin, Phone, UserCheck, ExternalLink } from 'lucide-react';
-import { DISPLAY_PHONE, SHOWROOM_ADDRESS, MAPS_URL } from '../data/siteData';
+import { DISPLAY_PHONE, SHOWROOM_ADDRESS, MAPS_URL, PHONE_NUMBER } from '../data/siteData';
 
 interface ContactSectionProps {
-  onOpenQuoteModal: () => void;
+  onOpenQuoteModal?: () => void;
 }
 
-export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenQuoteModal }) => {
+export const ContactSection: React.FC<ContactSectionProps> = () => {
+  const whatsappUrl = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent('Olá, vim pelo site e gostaria de solicitar um orçamento.')}`;
+
   return (
     <section id="contato" className="relative py-20 lg:py-28 bg-gradient-to-r from-[#0b536f] to-[#0787c8] text-white overflow-hidden">
       {/* Background ambient circle decoration */}
@@ -31,14 +33,16 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenQuoteModal
             </p>
 
             <div className="pt-4">
-              <button
-                onClick={onOpenQuoteModal}
-                className="h-16 px-8 bg-white hover:bg-[#f7f3ec] text-[#07516f] text-base font-extrabold rounded-xl shadow-2xl transition-all transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-3"
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="h-16 px-8 bg-white hover:bg-[#f7f3ec] text-[#07516f] text-base font-extrabold rounded-xl shadow-2xl transition-all transform hover:-translate-y-0.5 active:translate-y-0 inline-flex items-center justify-center gap-3"
               >
                 <MessageCircle className="w-5 h-5 text-[#0787c8]" />
                 <span>Chamar no WhatsApp</span>
                 <ExternalLink className="w-4 h-4" />
-              </button>
+              </a>
             </div>
           </div>
 

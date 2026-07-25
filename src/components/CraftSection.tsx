@@ -1,11 +1,14 @@
 import React from 'react';
 import { ArrowUpRight, ShieldCheck, Heart, Sparkles } from 'lucide-react';
+import { PHONE_NUMBER } from '../data/siteData';
 
 interface CraftSectionProps {
-  onOpenQuoteModal: () => void;
+  onOpenQuoteModal?: () => void;
 }
 
-export const CraftSection: React.FC<CraftSectionProps> = ({ onOpenQuoteModal }) => {
+export const CraftSection: React.FC<CraftSectionProps> = () => {
+  const whatsappUrl = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent('Olá, gostaria de tirar dúvidas sobre os móveis.')}`;
+
   return (
     <section id="diferenciais" className="relative py-20 lg:py-28 bg-[#0b4056] text-white overflow-hidden">
       {/* Decorative ambient background circle */}
@@ -16,28 +19,13 @@ export const CraftSection: React.FC<CraftSectionProps> = ({ onOpenQuoteModal }) 
           
           {/* Left Media Column */}
           <div className="lg:col-span-5 relative">
-            <div className="relative h-[480px] sm:h-[580px] lg:h-[640px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10">
+            <div className="relative h-[420px] sm:h-[520px] lg:h-[580px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10">
               <img
                 src="https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/armchair-black.webp"
                 alt="Detalhe do trançado artesanal em corda náutica preta"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0b4056]/80 via-transparent to-transparent" />
-            </div>
-
-            {/* Floating Detail Badge */}
-            <div className="absolute -bottom-6 left-4 right-4 sm:left-6 sm:right-6 bg-white text-[#132a34] p-5 rounded-2xl shadow-2xl flex items-start gap-4 border border-[#dce5e7]">
-              <div className="p-3 bg-[#0787c8]/10 text-[#0787c8] rounded-xl shrink-0 mt-0.5">
-                <Sparkles className="w-6 h-6" />
-              </div>
-              <div className="space-y-1">
-                <strong className="block text-sm font-bold text-[#07516f]">
-                  Detalhes que você sente.
-                </strong>
-                <p className="text-xs text-[#607078] leading-relaxed">
-                  Precisão no trançado, cuidado no acabamento e conforto em cada curva.
-                </p>
-              </div>
             </div>
           </div>
 
@@ -98,13 +86,15 @@ export const CraftSection: React.FC<CraftSectionProps> = ({ onOpenQuoteModal }) 
 
             {/* Action CTA */}
             <div className="pt-4">
-              <button
-                onClick={onOpenQuoteModal}
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-3 px-8 py-4 bg-transparent hover:bg-white text-white hover:text-[#0b4056] border-2 border-white/40 hover:border-white text-sm font-extrabold rounded-xl transition-all shadow-lg"
               >
                 <span>Quero tirar minhas dúvidas</span>
                 <ArrowUpRight className="w-4 h-4" />
-              </button>
+              </a>
             </div>
 
           </div>
@@ -114,3 +104,4 @@ export const CraftSection: React.FC<CraftSectionProps> = ({ onOpenQuoteModal }) 
     </section>
   );
 };
+

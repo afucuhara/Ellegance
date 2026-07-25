@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ArrowUpRight, MessageCircle, FileCode } from 'lucide-react';
-import { LOGO_URL } from '../data/siteData';
+import { Menu, X, ArrowUpRight, MessageCircle } from 'lucide-react';
+import { LOGO_URL, PHONE_NUMBER } from '../data/siteData';
 
 interface HeaderProps {
-  onOpenQuoteModal: () => void;
+  onOpenQuoteModal?: () => void;
 }
 
 export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const whatsappUrl = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent('Olá, vim pelo site e gostaria de solicitar um orçamento.')}`;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,8 +33,8 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
     <header
       className={`fixed top-0 inset-x-0 z-40 transition-all duration-300 h-[76px] lg:h-[88px] flex items-center ${
         scrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-[#10252f]/10'
-          : 'bg-white/90 backdrop-blur-md border-b border-[#10252f]/05'
+          ? 'bg-white/95 backdrop-blur-md shadow-sm'
+          : 'bg-white/90 backdrop-blur-md'
       }`}
     >
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 flex items-center justify-between gap-4">
@@ -61,13 +63,15 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
 
         {/* Actions */}
         <div className="flex items-center gap-2 sm:gap-3">
-          <button
-            onClick={onOpenQuoteModal}
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center justify-center gap-2 h-11 lg:h-12 px-5 lg:px-6 bg-[#0787c8] hover:bg-[#07516f] text-white text-xs lg:text-sm font-extrabold rounded-lg shadow-lg shadow-[#0787c8]/20 hover:shadow-xl transition-all transform hover:-translate-y-0.5 active:translate-y-0"
           >
             <span>Pedir orçamento</span>
             <ArrowUpRight className="w-4 h-4" />
-          </button>
+          </a>
 
           {/* Mobile menu trigger */}
           <button
@@ -96,16 +100,16 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
             ))}
           </nav>
           <div className="pt-2 flex flex-col gap-2">
-            <button
-              onClick={() => {
-                setMobileMenuOpen(false);
-                onOpenQuoteModal();
-              }}
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMobileMenuOpen(false)}
               className="w-full py-3.5 px-5 bg-[#0787c8] text-white font-bold rounded-lg flex items-center justify-center gap-2 shadow-md"
             >
               <MessageCircle className="w-5 h-5" />
               <span>Solicitar Orçamento via WhatsApp</span>
-            </button>
+            </a>
           </div>
         </div>
       )}

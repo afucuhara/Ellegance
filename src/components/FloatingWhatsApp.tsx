@@ -10,13 +10,13 @@ export const FloatingWhatsApp: React.FC = () => {
   return (
     <button
       onClick={handleClick}
-      className="fixed bottom-6 right-6 z-40 p-3.5 sm:p-4 bg-[#25D366] hover:bg-[#1ebd59] text-white rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 flex items-center justify-center group cursor-pointer border-2 border-white/20"
+      className="fixed bottom-4 right-4 sm:bottom-5 sm:right-5 z-40 p-2.5 sm:p-3 bg-[#25D366] hover:bg-[#1ebd59] text-white rounded-full shadow-lg hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center group cursor-pointer border border-white/30"
       aria-label="Falar no WhatsApp"
       title="Falar no WhatsApp com especialista"
     >
       {/* Official WhatsApp Logo SVG */}
       <svg
-        className="w-7 h-7 sm:w-8 sm:h-8 fill-current drop-shadow-sm shrink-0"
+        className="w-5 h-5 sm:w-6 sm:h-6 fill-current drop-shadow-sm shrink-0"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
