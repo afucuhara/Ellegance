@@ -1,17 +1,13 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, Maximize2 } from 'lucide-react';
 import { PRODUCTS } from '../data/siteData';
 import { Product } from '../types';
 
 interface CollectionProps {
-  onSelectProduct: (productName: string) => void;
-  onOpenLightbox: (title: string, image: string, category: string) => void;
+  onSelectProduct?: (productName: string) => void;
+  onOpenLightbox?: (title: string, image: string, category: string) => void;
 }
 
-export const Collection: React.FC<CollectionProps> = ({
-  onSelectProduct,
-  onOpenLightbox
-}) => {
+export const Collection: React.FC<CollectionProps> = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('Todos');
 
   const categories = ['Todos', 'Living', 'Jantar', 'Lazer', 'Gourmet'];
@@ -88,16 +84,6 @@ export const Collection: React.FC<CollectionProps> = ({
                   <span className="absolute top-3 left-3 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-[10px] font-bold uppercase tracking-wider text-[#07516f]">
                     {product.category}
                   </span>
-
-                  {/* Expand / Lightbox Button */}
-                  <button
-                    onClick={() => onOpenLightbox(product.title, product.image, product.category)}
-                    className="absolute top-3 right-3 p-2 bg-white/90 hover:bg-white text-[#132a34] rounded-full opacity-0 group-hover:opacity-100 transition-opacity shadow-md"
-                    title="Ampliar foto"
-                    aria-label="Ampliar foto"
-                  >
-                    <Maximize2 className="w-4 h-4" />
-                  </button>
                 </div>
 
                 {/* Card Copy */}
@@ -105,21 +91,10 @@ export const Collection: React.FC<CollectionProps> = ({
                   <h3 className="text-xl sm:text-2xl font-serif text-[#132a34] font-medium mb-2">
                     {product.title}
                   </h3>
-                  <p className="text-sm text-[#607078] leading-relaxed min-h-[48px]">
+                  <p className="text-sm text-[#607078] leading-relaxed">
                     {product.description}
                   </p>
                 </div>
-              </div>
-
-              {/* Card Footer Action */}
-              <div className="px-6 pb-6 pt-2 border-t border-[#dbdfdd]">
-                <button
-                  onClick={() => onSelectProduct(product.title)}
-                  className="w-full flex items-center justify-between text-[#07516f] group-hover:text-[#0787c8] font-bold text-xs uppercase tracking-wider transition-colors pt-2"
-                >
-                  <span>Solicitar opções de {product.title}</span>
-                  <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-1 group-hover:-translate-y-0.5 transition-transform" />
-                </button>
               </div>
             </article>
           ))}
