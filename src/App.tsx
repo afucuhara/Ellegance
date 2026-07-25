@@ -5,7 +5,6 @@ import { PromiseStrip } from './components/PromiseStrip';
 import { Collection } from './components/Collection';
 import { GalleryCarousel } from './components/GalleryCarousel';
 import { CraftSection } from './components/CraftSection';
-import { ColorPalette } from './components/ColorPalette';
 import { AboutSection } from './components/AboutSection';
 import { ProcessSection } from './components/ProcessSection';
 import { FaqSection } from './components/FaqSection';
@@ -102,11 +101,6 @@ export default function App() {
 
         {/* Craft / Differentials Section */}
         <CraftSection onOpenQuoteModal={() => handleOpenQuoteModal()} />
-
-        {/* Rope Color Palette Customizer */}
-        <ColorPalette
-          onSelectColorForQuote={(colorName) => handleOpenQuoteModal('', colorName)}
-        />
 
         {/* About Us Section */}
         <AboutSection />

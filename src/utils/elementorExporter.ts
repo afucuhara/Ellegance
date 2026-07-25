@@ -42,7 +42,6 @@ export const generateElementorJson = (): ElementorTemplate => {
   <a href="#inicio"><img src="${LOGO_URL}" alt="Ellegance Móveis" style="height: 48px; width: auto;" /></a>
   <nav style="display: flex; gap: 28px; align-items: center;">
     <a href="#colecao" style="color: #344b55; font-weight: 700; text-decoration: none; font-size: 14px;">Coleção</a>
-    <a href="#cores" style="color: #344b55; font-weight: 700; text-decoration: none; font-size: 14px;">Cores de Corda</a>
     <a href="#galeria" style="color: #344b55; font-weight: 700; text-decoration: none; font-size: 14px;">Ambientes Reais</a>
     <a href="#diferenciais" style="color: #344b55; font-weight: 700; text-decoration: none; font-size: 14px;">Diferenciais</a>
     <a href="#faq" style="color: #344b55; font-weight: 700; text-decoration: none; font-size: 14px;">Dúvidas</a>
@@ -160,46 +159,7 @@ export const generateElementorJson = (): ElementorTemplate => {
         ]
       },
 
-      // 5. ROPE COLORS PALETTE CONTAINER
-      {
-        id: "container_rope_colors",
-        elType: "container",
-        isInner: false,
-        settings: {
-          content_width: "full",
-          container_type: "flex",
-          padding: { unit: "px", top: "0", right: "0", bottom: "0", left: "0", isLinked: true }
-        },
-        elements: [
-          {
-            id: "widget_rope_colors_html",
-            elType: "widget",
-            widgetType: "html",
-            settings: {
-              html: `<section id="cores" style="padding: 90px 40px; background-color: #f8f6f0; font-family: 'Plus Jakarta Sans', sans-serif;">
-  <div style="max-width: 1280px; margin: 0 auto;">
-    <div style="text-align: center; max-width: 700px; margin: 0 auto 50px auto;">
-      <h2 style="font-family: 'Playfair Display', serif; color: #132a34; font-size: 40px; margin: 0 0 16px 0;">Paleta de Cores em Corda N&aacute;utica</h2>
-      <p style="color: #607078; font-size: 17px; margin: 0;">Variedade de tonalidades tratadas contra raios UV para harmonizar perfeitamente com seu projeto arquitet&ocirc;nico.</p>
-    </div>
-    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 24px;">
-      ${ROPE_COLORS.map(c => `
-      <div style="background-color: #ffffff; padding: 24px; border-radius: 16px; border: 1px solid #e2ded5; display: flex; align-items: center; gap: 16px;">
-        <span style="width: 48px; height: 48px; border-radius: 12px; background-color: ${c.hex}; display: inline-block; flex-shrink: 0; border: 1px solid rgba(0,0,0,0.1);"></span>
-        <div>
-          <h4 style="color: #132a34; margin: 0 0 4px 0; font-size: 16px; font-weight: 700;">${c.name}</h4>
-          <p style="color: #607078; margin: 0; font-size: 13px;">${c.description}</p>
-        </div>
-      </div>`).join('')}
-    </div>
-  </div>
-</section>`
-            }
-          }
-        ]
-      },
-
-      // 6. GALLERY CONTAINER
+      // 5. GALLERY CONTAINER
       {
         id: "container_gallery",
         elType: "container",

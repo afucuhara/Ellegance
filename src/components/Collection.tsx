@@ -41,23 +41,30 @@ export const Collection: React.FC<CollectionProps> = ({
         </div>
 
         {/* Category Filters */}
-        <div 
-          className="flex items-center gap-2 overflow-x-auto no-scrollbar"
-          style={{ paddingBottom: '7px', marginBottom: '27px', height: '48.987px', width: '325.558px' }}
-        >
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setSelectedCategory(cat)}
-              className={`px-5 py-2.5 rounded-full text-xs font-extrabold uppercase tracking-wider transition-all whitespace-nowrap ${
-                selectedCategory === cat
-                  ? 'bg-[#07516f] text-white shadow-md'
-                  : 'bg-[#f7f3ec] text-[#607078] hover:bg-[#dce5e7] hover:text-[#132a34]'
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
+        <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 mb-10 w-full">
+          {categories.map((cat) => {
+            const count = cat === 'Todos' 
+              ? PRODUCTS.length 
+              : PRODUCTS.filter(p => p.category.includes(cat)).length;
+            return (
+              <button
+                key={cat}
+                onClick={() => setSelectedCategory(cat)}
+                className={`px-5 py-2.5 rounded-full text-xs font-extrabold uppercase tracking-wider transition-all cursor-pointer flex items-center gap-2 ${
+                  selectedCategory === cat
+                    ? 'bg-[#07516f] text-white shadow-md scale-105'
+                    : 'bg-[#f7f3ec] text-[#607078] hover:bg-[#dce5e7] hover:text-[#132a34]'
+                }`}
+              >
+                <span>{cat}</span>
+                <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${
+                  selectedCategory === cat ? 'bg-white/20 text-white' : 'bg-[#e2ded5] text-[#132a34]'
+                }`}>
+                  {count}
+                </span>
+              </button>
+            );
+          })}
         </div>
 
         {/* Product Cards Grid */}

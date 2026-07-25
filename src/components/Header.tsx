@@ -22,7 +22,6 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
     { name: 'Coleção', href: '#colecao' },
     { name: 'Galeria', href: '#galeria' },
     { name: 'Diferenciais', href: '#diferenciais' },
-    { name: 'Cores', href: '#cores' },
     { name: 'Sobre nós', href: '#sobre' },
     { name: 'Processo', href: '#processo' },
     { name: 'FAQ', href: '#faq' },
