@@ -1,5 +1,6 @@
 import React from 'react';
 import { X, ChevronLeft, ChevronRight, MessageSquare } from 'lucide-react';
+import { PHONE_NUMBER } from '../data/siteData';
 
 interface LightboxModalProps {
   isOpen: boolean;
@@ -72,18 +73,16 @@ export const LightboxModal: React.FC<LightboxModalProps> = ({
           )}
           <h3 className="text-xl font-serif text-white mt-1">{title}</h3>
 
-          {onRequestQuote && (
-            <button
-              onClick={() => {
-                onClose();
-                onRequestQuote(title);
-              }}
-              className="mt-3 inline-flex items-center gap-2 px-5 py-2.5 bg-[#b8934a] hover:bg-[#9a7836] text-white text-xs font-bold rounded-full transition-all shadow-lg"
-            >
-              <MessageSquare className="w-4 h-4" />
-              <span>Orçamento para este modelo ↗</span>
-            </button>
-          )}
+          <a
+            href={`https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(`Olá! Vi a imagem de "${title}" no site da Ellegance Móveis e gostaria de saber mais informações.`)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={onClose}
+            className="mt-3 inline-flex items-center gap-2 px-5 py-2.5 bg-[#b8934a] hover:bg-[#9a7836] text-white text-xs font-bold rounded-full transition-all shadow-lg"
+          >
+            <MessageSquare className="w-4 h-4" />
+            <span>Falar no WhatsApp sobre este modelo ↗</span>
+          </a>
         </div>
       </div>
     </div>

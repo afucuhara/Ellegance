@@ -1,11 +1,14 @@
 import React from 'react';
 import { ArrowUpRight, ArrowDown } from 'lucide-react';
+import { PHONE_NUMBER } from '../data/siteData';
 
 interface HeroProps {
-  onOpenQuoteModal: () => void;
+  onOpenQuoteModal?: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal }) => {
+export const Hero: React.FC<HeroProps> = () => {
+  const whatsappUrl = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent('Olá! Vim pelo site da Ellegance Móveis e gostaria de falar com um especialista.')}`;
+
   return (
     <section id="inicio" className="relative pt-28 lg:pt-36 pb-16 lg:pb-24 overflow-hidden bg-gradient-to-b lg:bg-gradient-to-br from-white via-[#fff] to-[#f8f6f0]">
       <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
@@ -31,13 +34,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal }) => {
 
             {/* Hero Actions */}
             <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-6 pt-2">
-              <button
-                onClick={onOpenQuoteModal}
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="h-14 sm:h-16 px-8 bg-[#b8934a] hover:bg-[#9a7836] text-white text-base font-extrabold rounded-xl shadow-xl shadow-[#b8934a]/25 hover:shadow-2xl transition-all transform hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-3"
               >
                 <span>Falar com um especialista</span>
                 <ArrowUpRight className="w-5 h-5" />
-              </button>
+              </a>
 
               <a
                 href="#colecao"

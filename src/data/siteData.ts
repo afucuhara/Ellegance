@@ -1,8 +1,8 @@
 import { Product, GalleryItem, RopeColor, FaqItem } from '../types';
 import logoImg from '../assets/images/regenerated_image_1785002193276.png';
 
-export const PHONE_NUMBER = "5541997682816";
-export const DISPLAY_PHONE = "(41) 99768-2816";
+export const PHONE_NUMBER = "5541999163917";
+export const DISPLAY_PHONE = "(41) 99916-3917";
 
 export interface ContactPerson {
   name: string;

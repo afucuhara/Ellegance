@@ -68,7 +68,7 @@ export const Collection: React.FC<CollectionProps> = () => {
           {filteredProducts.map((product: Product) => (
             <article
               key={product.id}
-              className="group bg-[#faf8f4] border border-[#ebe7df] rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:-translate-y-1.5 flex flex-col justify-between"
+              className="bg-[#faf8f4] border border-[#ebe7df] rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col justify-between"
             >
               <div>
                 {/* Card Image Container */}
@@ -76,7 +76,7 @@ export const Collection: React.FC<CollectionProps> = () => {
                   <img
                     src={product.image}
                     alt={product.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="w-full h-full object-cover"
                     loading="lazy"
                     decoding="async"
                   />

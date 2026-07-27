@@ -71,7 +71,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
             rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center justify-center gap-2 h-11 lg:h-12 px-5 lg:px-6 bg-[#b8934a] hover:bg-[#9a7836] text-white text-xs lg:text-sm font-extrabold rounded-lg shadow-lg shadow-[#b8934a]/20 hover:shadow-xl transition-all transform hover:-translate-y-0.5 active:translate-y-0"
           >
-            <span>Pedir orçamento</span>
+            <span>Falar no WhatsApp</span>
             <ArrowUpRight className="w-4 h-4" />
           </a>
 
@@ -110,7 +110,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
               className="w-full py-3.5 px-5 bg-[#b8934a] text-white font-bold rounded-lg flex items-center justify-center gap-2 shadow-md"
             >
               <MessageCircle className="w-5 h-5" />
-              <span>Solicitar Orçamento via WhatsApp</span>
+              <span>Falar no WhatsApp</span>
             </a>
           </div>
         </div>
