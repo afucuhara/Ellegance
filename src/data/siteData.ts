@@ -3,6 +3,7 @@ import logoImg from '../assets/images/regenerated_image_1785002193276.png';
 
 export const PHONE_NUMBER = "5541999163917";
 export const DISPLAY_PHONE = "(41) 99916-3917";
+export const INSTAGRAM_URL = "https://www.instagram.com/m.ellegance/";
 
 export interface ContactPerson {
   name: string;
