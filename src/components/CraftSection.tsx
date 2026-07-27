@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUpRight, ShieldCheck, Heart, Sparkles } from 'lucide-react';
+import { ArrowUpRight, ShieldCheck, Heart, Brush } from 'lucide-react';
 import { PHONE_NUMBER } from '../data/siteData';
 
 interface CraftSectionProps {
@@ -73,7 +73,7 @@ export const CraftSection: React.FC<CraftSectionProps> = () => {
 
               <div className="flex items-start gap-4">
                 <div className="p-2.5 bg-white/10 text-[#c5a25d] rounded-xl shrink-0 mt-1">
-                  <Sparkles className="w-5 h-5" />
+                  <Brush className="w-5 h-5" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white mb-1">Acabamento artesanal</h3>
