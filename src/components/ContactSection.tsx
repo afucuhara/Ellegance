@@ -1,108 +1,95 @@
 import React from 'react';
-import { MessageCircle, MapPin, Phone, UserCheck, ExternalLink } from 'lucide-react';
-import { DISPLAY_PHONE, SHOWROOM_ADDRESS, MAPS_URL, PHONE_NUMBER } from '../data/siteData';
+import { MessageCircle, MapPin, ExternalLink } from 'lucide-react';
+import { SHOWROOM_ADDRESS, MAPS_URL, CONTACT_PERSONS } from '../data/siteData';
 
 interface ContactSectionProps {
   onOpenQuoteModal?: () => void;
 }
 
 export const ContactSection: React.FC<ContactSectionProps> = () => {
-  const whatsappUrl = `https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent('Olá, vim pelo site e gostaria de solicitar um orçamento.')}`;
-
   return (
     <section id="contato" className="relative py-20 lg:py-28 bg-gradient-to-r from-[#161c20] to-[#252f36] text-white overflow-hidden">
       {/* Background ambient circle decoration */}
       <div className="absolute -left-72 -top-72 w-[630px] h-[630px] rounded-full border border-white/15 pointer-events-none" />
 
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-          
-          {/* Left Copy Column */}
-          <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2.5 text-[#c5a25d] text-xs font-black tracking-widest uppercase">
-              <span className="w-8 h-[2px] bg-[#c5a25d] inline-block" />
-              <span>Vamos criar juntos?</span>
-            </div>
-
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-white font-medium leading-tight">
-              Seu novo ambiente começa com uma conversa.
-            </h2>
-
-            <p className="text-base sm:text-xl text-white/85 leading-relaxed font-normal">
-              Fale com Rafael ou Michelle. Vamos entender seu espaço e indicar as peças ideais para o seu projeto.
-            </p>
-
-            <div className="pt-4">
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="h-16 px-8 bg-[#b8934a] hover:bg-[#9a7836] text-white text-base font-extrabold rounded-xl shadow-2xl transition-all transform hover:-translate-y-0.5 active:translate-y-0 inline-flex items-center justify-center gap-3"
-              >
-                <MessageCircle className="w-5 h-5 text-white" />
-                <span>Chamar no WhatsApp</span>
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </div>
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 relative z-10 space-y-10">
+        
+        {/* Section Title Header */}
+        <div className="max-w-3xl space-y-3">
+          <div className="inline-flex items-center gap-2.5 text-[#c5a25d] text-xs font-black tracking-widest uppercase">
+            <span className="w-8 h-[2px] bg-[#c5a25d] inline-block" />
+            <span>Vamos criar juntos?</span>
           </div>
 
-          {/* Right Contact Card Info */}
-          <div className="lg:col-span-5 bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/20 shadow-2xl space-y-6">
-            
-            {/* Phone Item */}
-            <div className="flex items-start gap-4 pb-5 border-b border-white/15">
-              <div className="p-3 bg-white/10 text-[#c5a25d] rounded-xl shrink-0">
-                <Phone className="w-5 h-5" />
-              </div>
-              <div>
-                <span className="block text-[10px] font-bold uppercase tracking-wider text-[#c5a25d]">
-                  WhatsApp
-                </span>
-                <a
-                  href={`tel:${DISPLAY_PHONE.replace(/\D/g, '')}`}
-                  className="text-lg font-bold text-white hover:text-[#c5a25d] transition-colors"
-                >
-                  {DISPLAY_PHONE}
-                </a>
-              </div>
-            </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif text-white font-medium leading-tight">
+            Seu novo ambiente começa com uma conversa.
+          </h2>
 
-            {/* Team Item */}
-            <div className="flex items-start gap-4 pb-5 border-b border-white/15">
-              <div className="p-3 bg-white/10 text-[#c5a25d] rounded-xl shrink-0">
-                <UserCheck className="w-5 h-5" />
+          <p className="text-base sm:text-lg text-white/85 leading-relaxed font-normal">
+            Fale diretamente com os nossos fundadores para escolher ou personalizar as peças ideais para o seu projeto:
+          </p>
+        </div>
+
+        {/* 2-Column Grid: Left (Contacts) | Right (Endereço) */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+          
+          {/* Left Column: Contact Persons */}
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/20 shadow-2xl flex flex-col justify-center space-y-4">
+            {CONTACT_PERSONS.map((person) => {
+              const personWaUrl = `https://wa.me/${person.phone}?text=${encodeURIComponent(person.whatsappMessage)}`;
+              return (
+                <div
+                  key={person.name}
+                  className="flex items-center justify-between bg-white/5 hover:bg-white/10 p-4 sm:p-5 rounded-xl border border-white/10 transition-colors gap-4"
+                >
+                  <div className="space-y-1">
+                    <p className="text-base sm:text-lg font-bold text-white">{person.name}</p>
+                    <p className="text-sm font-semibold text-[#c5a25d]">{person.displayPhone}</p>
+                  </div>
+
+                  <a
+                    href={personWaUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-4 py-2.5 bg-[#b8934a] hover:bg-[#9a7836] text-white rounded-lg transition-colors flex items-center gap-2 text-xs sm:text-sm font-bold shrink-0 shadow-md group"
+                    title={`Chamar ${person.name} no WhatsApp`}
+                  >
+                    <MessageCircle className="w-4 h-4 text-white" />
+                    <span>WhatsApp</span>
+                    <ExternalLink className="w-3.5 h-3.5 text-white/80 group-hover:text-white transition-opacity" />
+                  </a>
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Right Column: Address */}
+          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 sm:p-8 border border-white/20 shadow-2xl flex flex-col justify-between space-y-6">
+            <div className="flex items-start gap-4">
+              <div className="p-3.5 bg-white/10 text-[#c5a25d] rounded-xl shrink-0 mt-1">
+                <MapPin className="w-6 h-6" />
               </div>
-              <div>
-                <span className="block text-[10px] font-bold uppercase tracking-wider text-[#c5a25d]">
-                  Atendimento Especializado
+              <div className="space-y-2">
+                <span className="block text-xs font-bold uppercase tracking-wider text-[#c5a25d]">
+                  Endereço
                 </span>
-                <p className="text-base font-bold text-white">
-                  Rafael & Michelle
+                <p className="text-base sm:text-lg font-medium text-white leading-relaxed">
+                  {SHOWROOM_ADDRESS}
                 </p>
               </div>
             </div>
 
-            {/* Showroom Location Item */}
-            <div className="flex items-start gap-4">
-              <div className="p-3 bg-white/10 text-[#c5a25d] rounded-xl shrink-0">
-                <MapPin className="w-5 h-5" />
-              </div>
-              <div>
-                <span className="block text-[10px] font-bold uppercase tracking-wider text-[#c5a25d]">
-                  Showroom Curitiba
-                </span>
-                <a
-                  href={MAPS_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-medium text-white hover:text-[#c5a25d] transition-colors flex items-center gap-1 mt-0.5"
-                >
-                  <span>{SHOWROOM_ADDRESS}</span>
-                  <ExternalLink className="w-3.5 h-3.5 shrink-0" />
-                </a>
-              </div>
+            <div className="pt-2">
+              <a
+                href={MAPS_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm font-bold text-[#c5a25d] hover:text-white transition-colors bg-white/5 hover:bg-white/10 px-5 py-3 rounded-xl border border-white/10"
+              >
+                <span>Ver localização no Google Maps</span>
+                <ExternalLink className="w-4 h-4" />
+              </a>
             </div>
-
           </div>
 
         </div>

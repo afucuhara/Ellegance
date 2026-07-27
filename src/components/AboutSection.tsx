@@ -57,6 +57,8 @@ export const AboutSection: React.FC = () => {
                 src="https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/living-terracotta.webp"
                 alt="Coleção artesanal Ellegance Móveis em terracota"
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 

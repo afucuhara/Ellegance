@@ -5,9 +5,7 @@ export const Footer: React.FC = () => {
   const navLinks = [
     { name: 'Coleção', href: '#colecao' },
     { name: 'Galeria', href: '#galeria' },
-    { name: 'Diferenciais', href: '#diferenciais' },
     { name: 'Sobre nós', href: '#sobre' },
-    { name: 'Processo', href: '#processo' },
     { name: 'FAQ', href: '#faq' },
     { name: 'Contato', href: '#contato' },
   ];
@@ -25,6 +23,8 @@ export const Footer: React.FC = () => {
                 src={LOGO_URL}
                 alt="Ellegance Móveis"
                 className="w-44 sm:w-52 h-auto object-contain"
+                loading="lazy"
+                decoding="async"
               />
             </a>
             <p className="text-xs sm:text-sm text-[#607078] leading-relaxed">

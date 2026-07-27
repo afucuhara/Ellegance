@@ -23,10 +23,9 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
   const navLinks = [
     { name: 'Coleção', href: '#colecao' },
     { name: 'Galeria', href: '#galeria' },
-    { name: 'Diferenciais', href: '#diferenciais' },
     { name: 'Sobre nós', href: '#sobre' },
-    { name: 'Processo', href: '#processo' },
     { name: 'FAQ', href: '#faq' },
+    { name: 'Contato', href: '#contato' },
   ];
 
   return (
@@ -42,8 +41,11 @@ export const Header: React.FC<HeaderProps> = ({ onOpenQuoteModal }) => {
         <a href="#inicio" className="flex items-center shrink-0">
           <img
             src={LOGO_URL}
-            alt="Ellegance Móveis — Há 20 anos trazendo elegância e conforto"
+            alt="Ellegance Móveis — Há 20 anos trazendo elegância e conforto em corda náutica"
             className="w-[170px] sm:w-[210px] lg:w-[235px] h-auto object-contain"
+            loading="eager"
+            decoding="async"
+            fetchPriority="high"
           />
         </a>
 

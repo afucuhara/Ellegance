@@ -99,6 +99,8 @@ export const ColorPalette: React.FC<ColorPaletteProps> = ({ onSelectColorForQuot
                 src={activeColor.image || "https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/living-green.webp"}
                 alt={`Móvel Ellegance em corda ${activeColor.name}`}
                 className="w-full h-full object-cover transition-all duration-700"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 
@@ -108,6 +110,8 @@ export const ColorPalette: React.FC<ColorPaletteProps> = ({ onSelectColorForQuot
                 src="https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/armchairs-natural.webp"
                 alt="Poltronas em corda náutica natural"
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </div>
 

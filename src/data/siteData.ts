@@ -3,6 +3,31 @@ import logoImg from '../assets/images/regenerated_image_1785002193276.png';
 
 export const PHONE_NUMBER = "5541997682816";
 export const DISPLAY_PHONE = "(41) 99768-2816";
+
+export interface ContactPerson {
+  name: string;
+  role: string;
+  phone: string;
+  displayPhone: string;
+  whatsappMessage: string;
+}
+
+export const CONTACT_PERSONS: ContactPerson[] = [
+  {
+    name: "Rafael Forbeck",
+    role: "",
+    phone: "5541997682816",
+    displayPhone: "(41) 99768-2816",
+    whatsappMessage: "Olá Rafael Forbeck, vi o site da Ellegance Móveis e gostaria de conversar com você sobre um projeto de móveis em corda náutica.",
+  },
+  {
+    name: "Michelle Forbeck",
+    role: "",
+    phone: "5541999163917",
+    displayPhone: "(41) 99916-3917",
+    whatsappMessage: "Olá Michelle Forbeck, vi o site da Ellegance Móveis e gostaria de solicitar um orçamento personalizado para o meu ambiente.",
+  },
+];
 export const SHOWROOM_ADDRESS = "Av. Marechal Mascarenhas de Morais, 992 - Santa Cândida · Curitiba — PR";
 export const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Av.+Marechal+Mascarenhas+de+Morais,+992,+Santa+C%C3%A2ndida,+Curitiba+-+PR";
 export const LOGO_URL = logoImg;

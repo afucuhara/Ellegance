@@ -91,6 +91,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal }) => {
                 src="https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/living-natural.webp"
                 alt="Conjunto completo de sofá e poltronas Ellegance em corda náutica"
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
               />
             </div>
 
@@ -100,6 +103,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenQuoteModal }) => {
                 src="https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/dining-black.webp"
                 alt="Cadeira artesanal preta em corda náutica"
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
