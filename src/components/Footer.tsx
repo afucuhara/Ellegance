@@ -15,8 +15,8 @@ export const Footer: React.FC = () => {
     <footer className="bg-white text-[#132a34] py-10 px-4 sm:px-6 lg:px-10 border-t border-[#ebe7df]">
       <div className="w-full max-w-7xl mx-auto space-y-8">
         
-        {/* Main Row: Logo & Instagram on Left, Vertical Menu on Right */}
-        <div className="flex flex-col sm:flex-row items-start justify-between gap-8">
+        {/* Main Row: Logo & Instagram on Left, Vertical Menu shifted closer */}
+        <div className="flex flex-col sm:flex-row items-start justify-start gap-10 sm:gap-16 md:gap-24 lg:gap-32">
           {/* Left: Logo, Tagline & Instagram */}
           <div className="space-y-3 max-w-md">
             <a href="#inicio" className="inline-block transition-transform hover:scale-105">
@@ -45,12 +45,12 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Right: Vertical Menu (Items Stacked One Under Another) */}
-          <div className="flex flex-col items-start space-y-2.5">
+          {/* Right: Menu (Horizontal on mobile, vertical on desktop) */}
+          <div className="flex flex-col items-start space-y-2.5 w-full sm:w-auto">
             <span className="text-xs font-extrabold uppercase tracking-widest text-[#b8934a] mb-1">
               Menu
             </span>
-            <nav className="flex flex-col items-start gap-2.5" aria-label="Navegação do rodapé">
+            <nav className="flex flex-row flex-wrap items-center sm:flex-col sm:items-start gap-x-6 gap-y-2.5" aria-label="Navegação do rodapé">
               {navLinks.map((link) => (
                 <a
                   key={link.name}

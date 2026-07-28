@@ -41,11 +41,7 @@ export const GalleryCarousel: React.FC<GalleryCarouselProps> = ({ onOpenLightbox
         </div>
 
         {/* Gallery Controls Bar */}
-        <div className="flex items-center justify-between gap-4 mb-6">
-          <p className="text-xs uppercase font-extrabold tracking-widest text-[#7a878c]">
-            Arraste para o lado ou use as setas
-          </p>
-
+        <div className="flex items-center justify-end gap-4 mb-6">
           <div className="flex items-center gap-2">
             <button
               onClick={() => scroll('left')}

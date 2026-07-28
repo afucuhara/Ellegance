@@ -37,7 +37,7 @@ export const Collection: React.FC<CollectionProps> = () => {
         </div>
 
         {/* Category Filters */}
-        <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 mb-10 w-full">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-10 w-full">
           {categories.map((cat) => {
             const count = cat === 'Todos' 
               ? PRODUCTS.length 
@@ -46,14 +46,14 @@ export const Collection: React.FC<CollectionProps> = () => {
               <button
                 key={cat}
                 onClick={() => setSelectedCategory(cat)}
-                className={`px-5 py-2.5 rounded-full text-xs font-extrabold uppercase tracking-wider transition-all cursor-pointer flex items-center gap-2 ${
+                className={`flex-1 sm:flex-initial px-3 sm:px-5 py-2 sm:py-2.5 rounded-full text-[11px] sm:text-xs font-extrabold uppercase tracking-wider transition-all cursor-pointer flex items-center justify-center gap-1.5 sm:gap-2 whitespace-nowrap ${
                   selectedCategory === cat
-                    ? 'bg-[#b8934a] text-white shadow-md scale-105'
+                    ? 'bg-[#b8934a] text-white shadow-md'
                     : 'bg-[#f7f3ec] text-[#607078] hover:bg-[#e8dfd0] hover:text-[#132a34]'
                 }`}
               >
                 <span>{cat}</span>
-                <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${
+                <span className={`text-[9px] sm:text-[10px] px-1.5 sm:px-2 py-0.5 rounded-full font-bold ${
                   selectedCategory === cat ? 'bg-white/20 text-white' : 'bg-[#e2ded5] text-[#132a34]'
                 }`}>
                   {count}
