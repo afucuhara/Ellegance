@@ -18,6 +18,7 @@ import gal4Img from '../assets/images/regenerated_image_1786047937351.webp';
 import gal5Img from '../assets/images/regenerated_image_1786048119449.webp';
 import gal6Img from '../assets/images/regenerated_image_1786048120317.webp';
 import gal7Img from '../assets/images/regenerated_image_1786049032369.webp';
+import gal8Img from '../assets/images/regenerated_image_1786050172935.webp';
 import gal9Img from '../assets/images/regenerated_image_1786049032977.webp';
 import gal10Img from '../assets/images/regenerated_image_1786049033882.webp';
 import gal11Img from '../assets/images/regenerated_image_1786049034687.webp';
@@ -191,7 +192,7 @@ export const GALLERY: GalleryItem[] = [
     id: "galeria-9",
     title: "Balanço para momentos de pausa",
     category: "Lazer",
-    image: "https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/hanging-chair.webp",
+    image: gal8Img,
   },
   {
     id: "galeria-10",
