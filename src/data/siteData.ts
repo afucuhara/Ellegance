@@ -7,6 +7,7 @@ import prod3Img from '../assets/images/regenerated_image_1786047131160.jpg';
 import prod4Img from '../assets/images/regenerated_image_1786047131904.webp';
 import prod5Img from '../assets/images/regenerated_image_1786047133414.webp';
 import prod6Img from '../assets/images/regenerated_image_1786047133861.webp';
+import prod7Img from '../assets/images/regenerated_image_1786050697581.webp';
 import prod8Img from '../assets/images/regenerated_image_1786047134778.webp';
 import prod9Img from '../assets/images/regenerated_image_1786047135334.webp';
 
@@ -118,7 +119,7 @@ export const PRODUCTS: Product[] = [
     title: "Mesas de vidro & corda",
     description: "Combinações leves de tampos transparentes com estrutura trançada.",
     category: "Jantar",
-    image: "https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/dining-glass.webp",
+    image: prod7Img,
     whatsappMessage: "Olá, vim pelo site e gostaria de conhecer as opções de Mesas de vidro & corda.",
   },
   {
