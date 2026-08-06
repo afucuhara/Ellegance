@@ -1,5 +1,6 @@
 import React from 'react';
 import { Award, Heart, Sparkles } from 'lucide-react';
+import aboutImg from '../assets/images/regenerated_image_1786049483198.webp';
 
 export const AboutSection: React.FC = () => {
   return (
@@ -54,7 +55,7 @@ export const AboutSection: React.FC = () => {
           <div className="lg:col-span-5 relative">
             <div className="relative h-[420px] sm:h-[520px] rounded-2xl overflow-hidden shadow-2xl border-8 border-[#f7f3ec]">
               <img
-                src="https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/living-terracotta.webp"
+                src={aboutImg}
                 alt="Coleção artesanal Ellegance Móveis em terracota"
                 className="w-full h-full object-cover"
                 loading="lazy"

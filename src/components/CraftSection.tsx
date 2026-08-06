@@ -1,6 +1,7 @@
 import React from 'react';
 import { ArrowUpRight, ShieldCheck, Heart, Brush } from 'lucide-react';
 import { PHONE_NUMBER } from '../data/siteData';
+import craftImg from '../assets/images/regenerated_image_1786049482273.webp';
 
 interface CraftSectionProps {
   onOpenQuoteModal?: () => void;
@@ -21,7 +22,7 @@ export const CraftSection: React.FC<CraftSectionProps> = () => {
           <div className="lg:col-span-5 relative">
             <div className="relative h-[420px] sm:h-[520px] lg:h-[580px] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10">
               <img
-                src="https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/armchair-black.webp"
+                src={craftImg}
                 alt="Detalhe do trançado artesanal em corda náutica preta"
                 className="w-full h-full object-cover"
               />

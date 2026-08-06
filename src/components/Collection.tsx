@@ -64,7 +64,7 @@ export const Collection: React.FC<CollectionProps> = () => {
         </div>
 
         {/* Product Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 lg:gap-3">
           {filteredProducts.map((product: Product) => (
             <article
               key={product.id}
@@ -88,11 +88,11 @@ export const Collection: React.FC<CollectionProps> = () => {
                 </div>
 
                 {/* Card Copy */}
-                <div className="p-6">
-                  <h3 className="text-xl sm:text-2xl font-serif text-[#132a34] font-medium mb-2">
+                <div className="p-4 sm:p-5">
+                  <h3 className="text-lg sm:text-xl font-serif text-[#132a34] font-medium mb-1.5">
                     {product.title}
                   </h3>
-                  <p className="text-sm text-[#607078] leading-relaxed">
+                  <p className="text-xs sm:text-sm text-[#607078] leading-relaxed">
                     {product.description}
                   </p>
                 </div>

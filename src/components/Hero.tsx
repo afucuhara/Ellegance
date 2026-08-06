@@ -1,6 +1,8 @@
 import React from 'react';
 import { ArrowUpRight, ArrowDown } from 'lucide-react';
 import { PHONE_NUMBER } from '../data/siteData';
+import heroMainPhoto from '../assets/images/regenerated_image_1786044465533.webp';
+import chairPhoto from '../assets/images/regenerated_image_1786047937969.png';
 
 interface HeroProps {
   onOpenQuoteModal?: () => void;
@@ -93,7 +95,7 @@ export const Hero: React.FC<HeroProps> = () => {
             {/* Main Photo Tile */}
             <div className="absolute left-0 top-6 w-[82%] h-[85%] rounded-2xl overflow-hidden border-8 border-white shadow-2xl z-10">
               <img
-                src="https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/living-natural.webp"
+                src={heroMainPhoto}
                 alt="Conjunto completo de sofá e poltronas Ellegance em corda náutica"
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
                 loading="eager"
@@ -105,7 +107,7 @@ export const Hero: React.FC<HeroProps> = () => {
             {/* Chair Photo Tile */}
             <div className="absolute right-0 bottom-0 w-[40%] h-[50%] rounded-2xl overflow-hidden border-8 border-white shadow-2xl z-20">
               <img
-                src="https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/dining-black.webp"
+                src={chairPhoto}
                 alt="Cadeira artesanal preta em corda náutica"
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
                 loading="lazy"

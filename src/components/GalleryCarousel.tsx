@@ -69,7 +69,7 @@ export const GalleryCarousel: React.FC<GalleryCarouselProps> = ({ onOpenLightbox
             <figure
               key={item.id}
               onClick={() => onOpenLightbox(item.title, item.image, item.category)}
-              className="group shrink-0 w-[85%] sm:w-[45%] lg:w-[31%] bg-white rounded-2xl overflow-hidden border border-[#e4dfd5] shadow-lg cursor-pointer snap-start transition-all hover:-translate-y-1 hover:shadow-xl"
+              className="group shrink-0 w-[85%] sm:w-[45%] lg:w-[23%] bg-white rounded-2xl overflow-hidden border border-[#e4dfd5] shadow-lg cursor-pointer snap-start transition-all hover:-translate-y-1 hover:shadow-xl"
             >
               <div className="relative aspect-[4/3] bg-gradient-to-br from-[#e8e1d6] to-[#f7f4ee] overflow-hidden">
                 <img

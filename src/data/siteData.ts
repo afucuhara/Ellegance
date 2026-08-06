@@ -1,5 +1,26 @@
 import { Product, GalleryItem, RopeColor, FaqItem } from '../types';
 import logoImg from '../assets/images/regenerated_image_1785002193276.png';
+import prod0Img from '../assets/images/regenerated_image_1786046080804.webp';
+import prod1Img from '../assets/images/regenerated_image_1786046081830.webp';
+import prod2Img from '../assets/images/regenerated_image_1786047130130.jpg';
+import prod3Img from '../assets/images/regenerated_image_1786047131160.jpg';
+import prod4Img from '../assets/images/regenerated_image_1786047131904.webp';
+import prod5Img from '../assets/images/regenerated_image_1786047133414.webp';
+import prod6Img from '../assets/images/regenerated_image_1786047133861.webp';
+import prod8Img from '../assets/images/regenerated_image_1786047134778.webp';
+import prod9Img from '../assets/images/regenerated_image_1786047135334.webp';
+
+import gal0Img from '../assets/images/regenerated_image_1786047456252.jpg';
+import gal1Img from '../assets/images/regenerated_image_1786047456937.jpg';
+import gal2Img from '../assets/images/regenerated_image_1786047935975.jpg';
+import gal3Img from '../assets/images/regenerated_image_1786047936800.jpg';
+import gal4Img from '../assets/images/regenerated_image_1786047937351.webp';
+import gal5Img from '../assets/images/regenerated_image_1786048119449.webp';
+import gal6Img from '../assets/images/regenerated_image_1786048120317.webp';
+import gal7Img from '../assets/images/regenerated_image_1786049032369.webp';
+import gal9Img from '../assets/images/regenerated_image_1786049032977.webp';
+import gal10Img from '../assets/images/regenerated_image_1786049033882.webp';
+import gal11Img from '../assets/images/regenerated_image_1786049034687.webp';
 
 export const PHONE_NUMBER = "5541999163917";
 export const DISPLAY_PHONE = "(41) 99916-3917";
@@ -40,7 +61,7 @@ export const PRODUCTS: Product[] = [
     title: "Sofás & conjuntos",
     description: "Composições acolhedoras para varandas, jardins e áreas gourmet.",
     category: "Living",
-    image: "https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/living-natural.webp",
+    image: prod0Img,
     whatsappMessage: "Olá, vim pelo site e gostaria de conhecer as opções de Sofás e conjuntos.",
   },
   {
@@ -48,7 +69,7 @@ export const PRODUCTS: Product[] = [
     title: "Mesas & cadeiras",
     description: "Encontros à mesa com conforto, leveza e acabamento sofisticado.",
     category: "Jantar",
-    image: "https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/dining-round.webp",
+    image: prod1Img,
     whatsappMessage: "Olá, vim pelo site e gostaria de conhecer as opções de Mesas e cadeiras.",
   },
   {
@@ -56,7 +77,7 @@ export const PRODUCTS: Product[] = [
     title: "Poltronas artesanais",
     description: "Peças marcantes que combinam ergonomia, personalidade e tramas exclusivas.",
     category: "Living",
-    image: "https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/living-green.webp",
+    image: prod2Img,
     whatsappMessage: "Olá, vim pelo site e gostaria de conhecer as opções de Poltronas artesanais.",
   },
   {
@@ -64,7 +85,7 @@ export const PRODUCTS: Product[] = [
     title: "Balanços suspensos",
     description: "Um convite para desacelerar em espaços internos ou externos.",
     category: "Lazer",
-    image: "https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/hanging-chair.webp",
+    image: prod3Img,
     whatsappMessage: "Olá, vim pelo site e gostaria de conhecer as opções de Balanços suspensos.",
   },
   {
@@ -72,7 +93,7 @@ export const PRODUCTS: Product[] = [
     title: "Banquetas gourmet",
     description: "Design contemporâneo para bancadas, cozinhas e espaços gourmet.",
     category: "Gourmet",
-    image: "https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/gourmet-black.webp",
+    image: prod4Img,
     whatsappMessage: "Olá, vim pelo site e gostaria de conhecer as opções de Banquetas gourmet.",
   },
   {
@@ -80,7 +101,7 @@ export const PRODUCTS: Product[] = [
     title: "Espreguiçadeiras & daybeds",
     description: "Conforto amplo para viver seus melhores momentos ao ar livre.",
     category: "Lazer",
-    image: "https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/daybed.webp",
+    image: prod5Img,
     whatsappMessage: "Olá, vim pelo site e gostaria de conhecer as opções de Espreguiçadeiras e daybeds.",
   },
   {
@@ -88,7 +109,7 @@ export const PRODUCTS: Product[] = [
     title: "Conjuntos para varanda",
     description: "Tons terrosos e acolhedores em corda náutica para espaços com personalidade.",
     category: "Living",
-    image: "https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/living-terracotta.webp",
+    image: prod6Img,
     whatsappMessage: "Olá, vim pelo site e gostaria de conhecer as opções de Conjuntos para varanda.",
   },
   {
@@ -104,7 +125,7 @@ export const PRODUCTS: Product[] = [
     title: "Cadeiras de jantar",
     description: "Design autoral e ergonômico para compor salas de jantar e varandas.",
     category: "Jantar",
-    image: "https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/chair-olive.webp",
+    image: prod8Img,
     whatsappMessage: "Olá, vim pelo site e gostaria de conhecer as opções de Cadeiras de jantar.",
   },
   {
@@ -112,7 +133,7 @@ export const PRODUCTS: Product[] = [
     title: "Conjuntos para área gourmet",
     description: "Peças em tom grafite e preto para ambientes modernos e integrados.",
     category: "Gourmet",
-    image: "https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/dining-black.webp",
+    image: prod9Img,
     whatsappMessage: "Olá, vim pelo site e gostaria de conhecer as opções de Conjuntos para área gourmet.",
   }
 ];
@@ -122,49 +143,49 @@ export const GALLERY: GalleryItem[] = [
     id: "galeria-1",
     title: "Living externo em tons naturais",
     category: "Living",
-    image: "https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/living-natural.webp",
+    image: gal0Img,
   },
   {
     id: "galeria-2",
     title: "Preto e madeira em harmonia",
     category: "Jantar",
-    image: "https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/dining-black.webp",
+    image: gal1Img,
   },
   {
     id: "galeria-3",
     title: "Aconchego em terracota",
     category: "Living",
-    image: "https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/living-terracotta.webp",
+    image: gal2Img,
   },
   {
     id: "galeria-4",
     title: "Sala de jantar com desenho autoral",
     category: "Jantar",
-    image: "https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/dining-round.webp",
+    image: gal3Img,
   },
   {
     id: "galeria-5",
     title: "Verde profundo e fibras naturais",
     category: "Living",
-    image: "https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/living-green.webp",
+    image: gal4Img,
   },
   {
     id: "galeria-6",
     title: "Leveza para receber",
     category: "Jantar",
-    image: "https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/dining-glass.webp",
+    image: gal5Img,
   },
   {
     id: "galeria-7",
     title: "Área gourmet contemporânea",
     category: "Gourmet",
-    image: "https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/gourmet-black.webp",
+    image: gal6Img,
   },
   {
     id: "galeria-8",
     title: "Daybed para desacelerar",
     category: "Lazer",
-    image: "https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/daybed.webp",
+    image: gal7Img,
   },
   {
     id: "galeria-9",
@@ -176,19 +197,19 @@ export const GALLERY: GalleryItem[] = [
     id: "galeria-10",
     title: "Living artesanal em verde oliva",
     category: "Living",
-    image: "https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/living-olive.webp",
+    image: gal9Img,
   },
   {
     id: "galeria-11",
     title: "Poltronas clássicas renovadas",
     category: "Living",
-    image: "https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/armchairs-natural.webp",
+    image: gal10Img,
   },
   {
     id: "galeria-12",
     title: "Trama e cor sob medida",
     category: "Jantar",
-    image: "https://ellegance-moveis.daring-fairy-0251.chatgpt.site/client-real/chair-olive.webp",
+    image: gal11Img,
   },
 ];
 
